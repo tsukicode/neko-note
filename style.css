@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Gluten:wght@100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Gluten", cursive;
+    font-weight: 200;
+    font-size: 25px;
+    background-image: url(/img/background.jpg);
+}
+
+/*rodapé*/
+footer {
+    font-size: 18px;
+}
