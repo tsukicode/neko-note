@@ -4,29 +4,50 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Neko Note</title>
+
+        <!-- Fonte para ícones -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer"/> <!--icon do botão add-->
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        <!-- CSS externo -->
         <link rel="stylesheet" href="style.css">
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
     </head>
 
     <body>
-        <header>
-            <img src="/img/logo.png" alt="logo 'Neko Note' escrita na fonte rosa e estilizado com corações" height="200px">
-        </header>
+        <div class="container">
+            <!-- Header -->
+            <header>
+                <img src="/img/logo.png" 
+                    alt="logo 'Neko Note' escrita na fonte rosa e estilizado com corações" 
+                    height="200px">
+                <h1>~~boas vindas ao <strong>Neko Note</strong>! ≽^• ˕ •^≼</h1>
 
-        <main>
-            <div class="notes">
-                <input type="text" id="text-area" placeholder="Digite aqui...">
+                <!-- Navegação -->
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                    </ul>
+                </nav>
+            </header>
+            
+            <!-- Conteúdo principal -->
+            <main>
+                <section class="notes">
+                    <input type="text" id="text-area" placeholder="Digite aqui...">
+                    <button type="submit" id="add-note"><i class="fa-solid fa-plus"></i></button>
+                </section>
+            </main>
 
-                <button type="submit" id="add-note"><i class="fa-solid fa-plus"></i></button>
-            </div>
-        </main>
-
-        <footer>
-            <p>Criado por tsuki.</p>
-        </footer>
+            <!-- Rodapé -->
+            <footer>
+                <p>Criado por tsuki.</p>
+            </footer>
+        </div>
         
+        <!-- Script -->
         <script src="script.js"></script>
     </body>
 </html>
