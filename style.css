@@ -25,28 +25,45 @@ a, button {
 .container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: 1.8rem;
+}
+
+.coluna-inicial {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 strong {
     color: #ff8692; /* cor do texto destacado */
 }
 
-/* Estilo da barra de navegação */
-
-ul, a {
-    color: black;
-    text-decoration-line: none;
-    list-style-type: none;
+.barra-nav {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
 }
 
-li {
-    background-color:rgb(224, 191, 203);
-    border-radius: 10px;
-    margin-bottom: 20px;
-    padding: 10px;
+.barra-nav-link {
+    background-color: rgb(224, 191, 203);
+    width: 280px;
+    text-align: center;
+    border-radius: 16px;
+    font-size: 24px;
+    padding: 15px 0;
+    text-decoration: none;
+    color: #000000;
+    font-weight: 300;
 }
 
 /* rodapé */
 footer {
     font-size: 18px;
+    margin-bottom: 0;
 }
