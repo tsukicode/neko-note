@@ -9,7 +9,6 @@ body {
     height: 100vh; /*100% da tela*/
     box-sizing: border-box;
     width: 100%;
-    border: solid #d6a9c4 10px;
     padding: 20px;
     font-family: "Gluten", cursive;
     font-weight: 200;
@@ -23,17 +22,18 @@ a, button {
 }
 
 .container {
+    width: 90%;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 50px;
 }
 
 h1 {
     font-size: 1.8rem;
+    font-weight: 300;
 }
 
 .coluna-inicial {
-    width: 500px;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -51,7 +51,7 @@ strong {
 }
 
 .barra-nav-link {
-    background-color: rgb(224, 191, 203);
+    background-color: #e0bfcb;
     width: 280px;
     text-align: center;
     border-radius: 16px;
@@ -62,8 +62,60 @@ strong {
     font-weight: 300;
 }
 
+.notes {
+    background-color: #fff0f5;
+    border-radius: 12px;
+    border: 2px solid rgb(242, 204, 229);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+#text-area {
+    width: 80%;
+    height: 300px;
+    padding: 15px;
+    font-family: "Gluten", cursive;
+    font-size: 18px;
+    border: none;
+    border-radius: 12px;
+    background-color: #fff0f5;
+    box-shadow: 4px 4px 8px rgba (0,0,0,0.1);
+    resize: none;
+}
+
+#text-area:focus {
+    outline: 2px solid #ffb6c1;
+}
+
+#add-note {
+    background-color: #e0bfcb;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-size: 20px;
+    transition: transform 0.2s;
+}
+
+#add-note:hover {
+    transform: scale(1.05);
+    background-color: #ffccd5;
+}
+
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      align-items: center;
+  }
+  .notes {
+    width: 95%;
+  }
+}
+
 /* rodapé */
 footer {
     font-size: 18px;
-    margin-bottom: 0;
+    
 }
