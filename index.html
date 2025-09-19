@@ -18,18 +18,19 @@
     <body>
         <div class="container">
             <!-- Header -->
-            <header>
-                <img src="/img/logo.png" 
-                    alt="logo 'Neko Note' escrita na fonte rosa e estilizado com corações" 
-                    height="200px">
-                <h1>~~boas vindas ao <strong>Neko Note</strong>! ≽^• ˕ •^≼</h1>
-
+            <header class="coluna-inicial">
+                <div id="capa">
+                    <img src="/img/logo.png" 
+                        alt="logo 'Neko Note' escrita na fonte rosa e estilizado com corações" 
+                        height="200px">
+                    <h1>~~boas vindas ao <strong>Neko Note</strong>! 
+                        ≽^• ˕ •^≼</h1>
+                </div>
+                
                 <!-- Navegação -->
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="sobre.html">Sobre</a></li>
-                    </ul>
+                <nav class="barra-nav">
+                    <a class="barra-nav-link" href="index.html">Inicio</a>
+                    <a class="barra-nav-link" href="sobre.html">Sobre</a>
                 </nav>
             </header>
             
@@ -40,13 +41,13 @@
                     <button type="submit" id="add-note"><i class="fa-solid fa-plus"></i></button>
                 </section>
             </main>
-
-            <!-- Rodapé -->
-            <footer>
-                <p>Criado por tsuki.</p>
-            </footer>
         </div>
-        
+
+        <!-- Rodapé -->
+        <footer>
+            <p>Criado por tsuki.</p>
+        </footer>
+
         <!-- Script -->
         <script src="script.js"></script>
     </body>
