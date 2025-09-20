@@ -75,12 +75,17 @@ strong {
 }
 
 #text-area {
-    padding: 15px;
+    width: 600px;
+    height: 35vh;
+    padding: 10px 15px 15px 60px;
     font-family: "Gluten", cursive;
-    font-size: 18px;
+    font-size: 19px;
+    font-weight: 200;
+    line-height: 29px; /* padding-top(10px) + font-size(19px) */
     border: none;
     border-radius: 12px;
-    background-color: #fff0f5;
+    background: url(/img/background-textarea.jpg);
+    background-size: cover;
     box-shadow: 4px 4px 8px rgba (0,0,0,0.1);
     resize: none;
 }
