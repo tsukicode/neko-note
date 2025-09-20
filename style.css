@@ -61,6 +61,13 @@ strong {
     text-decoration: none;
     color: #000000;
     font-weight: 300;
+    transition: transform 0.2s;
+}
+
+.barra-nav-link:hover {
+    transform: scale(1.05);
+    background-color: #ffccd5;
+
 }
 
 .notes {
