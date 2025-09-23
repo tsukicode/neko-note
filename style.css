@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Gluten:wght@100..900&display=swap');
 
+:root {
+    --texto-padrao: #000000;
+    --rosa-principal: #e0bfcb;
+    --rosa-secundario: #fff0f5;
+    --cor-bordas: #ffb6c1;
+    --cor-hover: #ffccd5;
+    --texto-destacado: #ff8692;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +18,6 @@ body {
     height: 100vh; /*100% da tela*/
     box-sizing: border-box;
     width: 100%;
-    padding: 20px;
     font-family: "Gluten", cursive;
     font-weight: 200;
     font-size: 25px;
@@ -23,6 +31,7 @@ a, button {
 
 .container {
     width: 90%;
+    padding: 2%;
     display: flex;
     justify-content: center;
     gap: 100px;
@@ -37,11 +46,11 @@ h1 {
 .coluna-inicial {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 50px;
 }
 
 strong {
-    color: #ff8692; /* cor do texto destacado */
+    color: var(--texto-destacado);
 }
 
 .barra-nav {
@@ -52,28 +61,28 @@ strong {
 }
 
 .barra-nav-link {
-    background-color: #e0bfcb;
+    background-color: var(--rosa-principal);
     width: 280px;
     text-align: center;
     border-radius: 16px;
     font-size: 24px;
     padding: 15px 0;
     text-decoration: none;
-    color: #000000;
+    color: var(--texto-padrao);
     font-weight: 300;
     transition: transform 0.2s;
 }
 
 .barra-nav-link:hover {
     transform: scale(1.05);
-    background-color: #ffccd5;
+    background-color: var(--cor-hover);
 
 }
 
 .notes {
-    background-color: #fff0f5;
+    background-color: var(--rosa-secundario);
     border-radius: 12px;
-    border: 2px solid rgb(242, 204, 229);
+    border: 2px solid var(--cor-bordas);
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -98,11 +107,11 @@ strong {
 }
 
 #text-area:focus {
-    outline: 2px solid #ffb6c1;
+    outline: 2px solid var(--cor-bordas);
 }
 
 #add-note {
-    background-color: #e0bfcb;
+    background-color: var(--rosa-principal);
     border: none;
     padding: 10px 20px;
     border-radius: 12px;
@@ -112,7 +121,7 @@ strong {
 
 #add-note:hover {
     transform: scale(1.05);
-    background-color: #ffccd5;
+    background-color: var(--cor-hover);
 }
 
 @media (max-width: 768px) {
@@ -123,12 +132,11 @@ strong {
   .notes {
     width: 95%;
   }
-  footer {
-    text-align: center;
-  }
 }
 
-/* rodapé */
-footer {
+.rodape {
     font-size: 18px;
+    background-color: var(--rosa-principal);
+    text-align: center;
+    padding: 10px;
 }
