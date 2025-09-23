@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Gluten:wght@100..900&display=swap');
 
 :root {
-    --texto-padrao: #000000;
-    --rosa-principal: #e0bfcb;
-    --rosa-secundario: #fff0f5;
-    --cor-bordas: #ffb6c1;
-    --cor-hover: #ffccd5;
-    --texto-destacado: #ff8692;
+    --texto-padrao: #423f3f;
+    --cor-primaria: #ffccd5;
+    --cor-secundaria: #694d66;
+    --cor-bordas: #c2b9ba;
+    --sombra: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
 * {
@@ -21,7 +20,7 @@ body {
     font-family: "Gluten", cursive;
     font-weight: 200;
     font-size: 25px;
-    background-image: url(/img/background.jpg);
+    color: var(--texto-padrao);
     cursor: url(/img/cursor1.png), auto; /* cursor padrão */
 }
 
@@ -46,63 +45,59 @@ h1 {
 .coluna-inicial {
     display: flex;
     flex-direction: column;
-    gap: 50px;
-}
-
-strong {
-    color: var(--texto-destacado);
+    gap: 30px;
 }
 
 .barra-nav {
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 30px;
+    gap: 40px;
 }
 
 .barra-nav-link {
-    background-color: var(--rosa-principal);
+    color: var(--texto-padrao);
+    box-shadow: var(--sombra);
     width: 280px;
     text-align: center;
     border-radius: 16px;
     font-size: 24px;
     padding: 15px 0;
     text-decoration: none;
-    color: var(--texto-padrao);
     font-weight: 300;
     transition: transform 0.2s;
 }
 
 .barra-nav-link:hover {
     transform: scale(1.05);
-    background-color: var(--cor-hover);
+    background-color: var(--cor-primaria);
 
 }
 
 .notes {
-    background-color: var(--rosa-secundario);
-    border-radius: 12px;
+    border-radius: 32px;
     border: 2px solid var(--cor-bordas);
-    padding: 20px;
+    box-shadow: var(--sombra);
+    padding: 30px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 40px;
     margin-top: 30px;
 }
 
 #text-area {
     width: 600px;
-    height: 35vh;
+    height: 30vh;
     padding: 10px 15px 15px 60px;
     font-family: "Gluten", cursive;
     font-size: 19px;
     font-weight: 200;
     line-height: 29px; /* padding-top(10px) + font-size(19px) */
     border: none;
-    border-radius: 12px;
+    border-radius: 20px;
     background: url(/img/background-textarea.jpg);
     background-size: cover;
-    box-shadow: 4px 4px 8px rgba (0,0,0,0.1);
+    box-shadow: var(--sombra);
     resize: none;
 }
 
@@ -111,17 +106,18 @@ strong {
 }
 
 #add-note {
-    background-color: var(--rosa-principal);
+    background-color: #ffffff;
     border: none;
+    box-shadow: var(--sombra);
     padding: 10px 20px;
-    border-radius: 12px;
+    border-radius: 20px;
     font-size: 20px;
     transition: transform 0.2s;
 }
 
 #add-note:hover {
     transform: scale(1.05);
-    background-color: var(--cor-hover);
+    background-color: var(--cor-primaria);
 }
 
 @media (max-width: 768px) {
@@ -136,7 +132,15 @@ strong {
 
 .rodape {
     font-size: 18px;
-    background-color: var(--rosa-principal);
+    color: var(--cor-primaria);
+    background-color: var(--cor-secundaria);
+    width: 150px;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
+    transition: transform 0.2s, border 0.2s;
+}
+
+.rodape:hover {
+    border-top: 5px solid #543a52;
+    border-right: 5px solid #543a52;
 }
