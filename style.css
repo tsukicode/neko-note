@@ -22,6 +22,9 @@ body {
     font-size: 25px;
     color: var(--texto-padrao);
     cursor: url(/img/cursor1.png), auto; /* cursor padrão */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 a, button {
@@ -34,7 +37,7 @@ a, button {
     display: flex;
     justify-content: center;
     gap: 100px;
-    min-height: calc(100vh - 60px);
+    flex: 1;
 }
 
 h1 {
@@ -87,7 +90,7 @@ h1 {
 
 #text-area {
     width: 600px;
-    height: 30vh;
+    height: 35vh;
     padding: 10px 15px 15px 60px;
     font-family: "Gluten", cursive;
     font-size: 19px;
@@ -137,6 +140,7 @@ h1 {
     width: 150px;
     text-align: center;
     padding: 15px;
+    margin-top: auto;
     transition: transform 0.2s, border 0.2s;
 }
 
