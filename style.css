@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Gluten:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Emilys+Candy&family=Gluten:wght@100..900&family=Great+Vibes&family=Iceland&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Tangerine:wght@400;700&family=Updock&display=swap');
 
 :root {
     --texto-padrao: #423f3f;
@@ -6,6 +7,7 @@
     --cor-secundaria: #694d66;
     --cor-bordas: #c2b9ba;
     --sombra: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    --fonte: "Gluten", cursive;
 }
 
 * {
@@ -17,7 +19,7 @@ body {
     height: 100vh; /*100% da tela*/
     box-sizing: border-box;
     width: 100%;
-    font-family: "Gluten", cursive;
+    font-family: var(--fonte);
     font-weight: 200;
     font-size: 25px;
     color: var(--texto-padrao);
@@ -27,7 +29,7 @@ body {
     flex-direction: column;
 }
 
-a, button {
+a, button, #modo-noturno, .fonte, .idioma {
     cursor: url(/img/cursor2.png), auto; /* cursor para links e botões */
 }
 
@@ -36,6 +38,7 @@ a, button {
     padding: 2%;
     display: flex;
     justify-content: center;
+    margin-top: 50px;
     gap: 100px;
     flex: 1;
 }
@@ -77,7 +80,11 @@ h1 {
 
 }
 
-.notes {
+.notes, .sobre, .opcoes {
+    max-height: 70vh;
+    max-width: 70vh;
+    min-width: 70vh;
+    min-height: 30vh;
     border-radius: 32px;
     border: 2px solid var(--cor-bordas);
     box-shadow: var(--sombra);
@@ -92,7 +99,7 @@ h1 {
     width: 600px;
     height: 35vh;
     padding: 10px 15px 15px 60px;
-    font-family: "Gluten", cursive;
+    font-family: var(--fonte);
     font-size: 19px;
     font-weight: 200;
     line-height: 29px; /* padding-top(10px) + font-size(19px) */
@@ -123,12 +130,76 @@ h1 {
     background-color: var(--cor-primaria);
 }
 
+.sobre-contato {
+    display: flex;
+    gap: 25px;
+}
+
+.contato {
+    width: 35px;
+    height: 35px;
+}
+
+#linkedin {
+    background: url(/img/linkedin.png);
+    background-size: cover;
+}
+
+#github {
+    background: url(/img/github.png);
+    background-size: cover;
+}
+
+.opcoes {
+    align-items: center;
+}
+
+.bloco-opcoes {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+#modo-noturno {
+    background-color: #543a52;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #423f3f;
+}
+
+.idioma, .fonte {
+    box-shadow: var(--sombra);
+    text-align: center;
+    border-radius: 40px;
+    padding: 20px;
+    margin-bottom: 20px;
+    list-style-type: none;
+}
+
+#modo-noturno:hover, .fonte:hover, .idioma:hover {
+     transform: scale(1.1);
+}
+
+#gluten {
+    font-family: "Gluten", cursive;
+}
+
+#emilys-candy {
+    font-family: "Emilys Candy", serif;
+}
+
+#updock {
+    font-family: "Updock", cursive;
+    font-size: 30px;
+}
+
 @media (max-width: 768px) {
   .container {
       flex-direction: column;
       align-items: center;
   }
-  .notes {
+  .notes, .sobre {
     width: 95%;
   }
 }
