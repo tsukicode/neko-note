@@ -96,7 +96,7 @@ h1 {
 }
 
 #text-area {
-    width: 600px;
+    max-width: 600px;
     height: 35vh;
     padding: 10px 15px 15px 60px;
     font-family: var(--fonte);
@@ -106,7 +106,6 @@ h1 {
     border: none;
     border-radius: 20px;
     background: url(/img/background-textarea.jpg);
-    background-size: cover;
     box-shadow: var(--sombra);
     resize: none;
 }
